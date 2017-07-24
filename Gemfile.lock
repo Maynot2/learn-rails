@@ -77,6 +77,8 @@ GEM
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
+    figaro (1.1.1)
+      thor (~> 0.14)
     gibbon (3.0.2)
       faraday (>= 0.9.1)
       multi_json (>= 1.11.0)
@@ -198,6 +200,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  figaro
   gibbon
   high_voltage
   jbuilder (~> 2.5)

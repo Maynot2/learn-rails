@@ -38,4 +38,7 @@ group :development do
   gem 'rails_layout'
 end
 
+# other
+gem "figaro"
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
