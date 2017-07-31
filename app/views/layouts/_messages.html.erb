@@ -3,7 +3,14 @@
   <% if msg.is_a?(String) %>
     <div class="alert alert-dismissible alert-<%= name.to_s == 'notice' ? 'success' : 'danger' %>">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%= content_tag :strong, msg, :id => "flash_#{name}" %>
+      <% unless @contact.nil? %>
+        <ul>
+        <% @contact.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      <% end %>
     </div>
   <% end %>
 <% end %>

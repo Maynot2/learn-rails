@@ -39,6 +39,8 @@ group :development do
 end
 
 # other
-gem "figaro"
+gem 'figaro'
+gem 'jquery-rails'
+gem 'autoprefixer-rails'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
