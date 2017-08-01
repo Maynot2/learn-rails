@@ -1,3 +1,5 @@
+
+
 class ContactsController < ApplicationController
 
   def new
@@ -5,12 +7,10 @@ class ContactsController < ApplicationController
   end
 
   def create
-    Rails.logger.debug "Debug: entering the create method"
     @contact = Contact.new(contact_params)
-    Rails.logger.debug "Debug: Is contact valid? #{@contact.valid?}"
     if @contact.valid?
-      Rails.logger.debug "Debug: contact is valid!"
       # TODO send message
+      UserMailer.contact_email(@contact).deliver_now
       flash[:notice] = "Message sent from #{@contact.name}."
       redirect_to root_path
     else
